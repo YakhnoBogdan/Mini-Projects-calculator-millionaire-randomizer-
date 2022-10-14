@@ -1,0 +1,31 @@
+@use '@utils/mixins.scss' as mix;
+
+.stages {
+    position: absolute;
+    right: 20px;
+    transform: translateY(-50%);
+    top: 50%;
+    display: flex;
+    flex-direction: column-reverse;
+    &__item {
+        color: #f79c00; 
+        padding: 0 10px;
+        &_current {
+            // background: linear-gradient(180deg, rgba(247, 156, 0, 1) 0%, rgba(247, 156, 0, 1) 87%, rgba(55, 55, 55, 0.8) 100%);
+            background-color: rgba(247, 156, 0, 1);
+            border-top-right-radius: 10% 50%;
+            border-bottom-right-radius: 10% 50%;
+            border-top-left-radius: 10% 50%;
+            border-bottom-left-radius: 10% 50%;
+            color: black;
+
+            & span {
+                color: #fff;
+            }
+        }
+    }
+
+    &__saved-amount {
+        color: #fff;
+    }
+}

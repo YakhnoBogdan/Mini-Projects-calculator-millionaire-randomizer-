@@ -1,0 +1,23 @@
+// Base
+@use './base/reset.scss';
+
+// Common 
+@use './common/layout/header.scss';
+
+// Main page
+
+// Millioner
+
+@use './millionaire/millionaire.scss';
+@use './millionaire/game-modal.scss';
+@use './millionaire/quiz.scss';
+@use './millionaire/hints.scss';
+@use './millionaire/millionaire-menu.scss';
+@use './millionaire/stages.scss';
+// Calculator
+
+@use './calculator/calculator.scss';
+
+// Randomizer
+
+@use './randomizer/randomizer.scss';

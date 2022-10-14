@@ -1,0 +1,102 @@
+@use '@utils/mixins.scss' as mix;
+.game-modal {
+    visibility: hidden;
+    opacity: 0;
+    width: 30%;
+    min-width: 200px;
+    padding: 30px;
+    border-radius: 10px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: rgba(41, 23, 23, 0.9);
+    z-index: 9999;
+    transition: all 0.3s ease-in;
+    &_open {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 15px;
+        @include mix.textProp(#fff, 1.5rem, 500);
+        font-family: 'Rubik', sans-serif;
+    }
+    &__win-amount {
+        display: block;
+        margin-bottom: 10px;
+        text-align: center;
+        @include mix.textProp(#fff, 1.2rem, 400);
+        font-family: 'Montserrat', sans-serif;
+    }
+    &__score {
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+        @include mix.textProp(#fff, 1.2rem, 400);
+        font-family: 'Montserrat', sans-serif;
+        position: relative;
+    }
+
+    &__confirm {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        & button {
+            cursor: pointer;
+            border-radius: 7px;
+            padding: 10px 20px;
+            @include mix.textProp(#fff, 1.2rem, 500);
+            font-family: 'Arial', sans-serif;
+        }
+    }
+
+    &__play-again {
+        background-color: #58d310;
+    }
+
+    &__cancel {
+        background-color: #ccc;
+    }
+}
+
+.friendsCall-hint {
+    position: absolute;
+    @include mix.transformCenter();
+    min-height: 15vh;
+    width: 30%;
+    background-color: rgb(0, 21, 83);
+    box-shadow: 0 0 10px #ccc;
+    z-index: 9999;
+    visibility: hidden;
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 40px;
+    transition: all 0.3s ease-in;
+    &_open {
+        visibility: visible;
+        opacity: 0.9;
+    }
+    &__title {
+        text-align: center;
+        @include mix.textProp(#fff, 1.2rem, 500);
+        font-family: 'Arial', sans-serif;
+    }
+
+    &__variant {
+        @include mix.textProp(#fff, 1.2rem, 700);
+        font-family: 'Arial', sans-serif;
+    }   
+    &__close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        @include mix.textProp(red, 1rem, 400);
+        font-family: 'Arial', sans-serif;
+        cursor: pointer;
+    }
+}
+

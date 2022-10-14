@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+"title": "Randomizer"
+})
+
+<body>
+    @@include('html/header.html',{})
+    <main class="main-randomizer">
+        <h1 class="main-randomizer__title">Get random numbers</h1>
+        <div class="wrapper-randomizer">
+            <form action="#" class="get-random">
+                <div class="get-random__wrapper">
+                    <label for="min">
+                        <h3 class="get-random__label">Min</h3>
+                        <input type="number" class="get-random__range-input input" id="min" value="10" required pattern="^(?!0)\d+$" title="Only numbers greater than zero">
+                    </label>
+                    <label for="max">
+                        <h3 class="get-random__label">Max</h3>
+                        <input type="number" class="get-random__range-input input" id="max" value="150" required pattern="^(?!0)\d+$" title="Only numbers greater than zero">
+                    </label>
+                    <label for="count">
+                        <h3 class="get-random__label">Count values</h3>
+                        <input type="number" class="get-random__count input" id="count"  value="50" required pattern="^(?!0)\d+$" title="Only numbers greater than zero">
+                    </label>
+                    <label for="unique" id="unique-block">
+                        <input type="checkbox" class="get-random__unique input" id="unique">
+                        <h3 class="get-random__label">Unique elements?</h3>
+                    </label>
+                </div>
+                <button class="get-random__button" type="submit">Generate</button>
+            </form>
+            <div class="output">
+                <h4 class="output__title">Output</h4>
+                <span class="output__placeholder"></span>
+            </div>
+        </div>
+    </main>
+    <script src="./scripts/randomizer.js"></script>
+    <script src="./scripts/chance.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+@use '@utils/mixins.scss' as mix;
+
+.quiz {
+    &__question-block {
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        padding: 15px;
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 35px;
+        border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
+        background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
+        box-shadow: 0 0 5px #eee;
+    }
+
+    &__question {
+        @include mix.textProp(#fff, 1.2rem, 500);
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    &__answers-list {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, calc(50% - 40px));
+        gap: 20px;
+
+        & li {
+            text-align: center;
+            padding: 10px 0;
+            background-color: linear-gradient(to right, #1F1C2C 0%, #928DAB 51%, #1F1C2C 100%);
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
+            cursor: pointer;
+            position: relative;
+            user-select: none;
+            @include mix.textProp(#fff, 1.2rem, 500);
+            font-family: 'Arial', sans-serif;
+
+            &:hover {
+                background-color: #F79C00;
+            }
+
+            &.right-answer {
+                background-color: green;
+            }
+
+            &.selected-answer {
+                background-color: #F79C00;
+            }
+
+            &:first-child::before {
+                content: 'A:';
+            }
+
+            &:nth-child(2)::before {
+                content: 'B:';
+            }
+
+            &:nth-child(3):before {
+                content: 'C:';
+            }
+
+            &:last-child:before {
+                content: 'D:';
+            }
+
+            &::before {
+                position: absolute;
+                transform: translateY(-50%);
+                top: 50%;
+                left: 20px;
+            }
+        }
+    }
+}
+
+@include mix.breakpoint(tablet) {
+    .quiz {
+        &__answers-list {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@use '@utils/mixins.scss' as mix;
+
+.hints {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 10px;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &-button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #f79c00;
+        }
+    }
+
+    &__50-50-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid black;
+        background-color: #fff;
+        @include mix.textProp(black, 1rem, 500);
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    &__friends-call {
+        background: center/contain url('../assets/img/phone-icon.png') no-repeat;
+        background-color: #fff;
+    }
+
+    &__ask-audience {
+        background: center/contain url('../assets/img/audience.png') no-repeat;
+        background-color: #fff;
+    }
+}

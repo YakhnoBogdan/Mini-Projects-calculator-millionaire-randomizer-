@@ -1,0 +1,39 @@
+@use '@utils/mixins.scss' as mix;
+
+.millionaire {
+    min-height: 100vh;
+    padding: 20px 0;
+    &-main {
+        background: center/cover url('../assets/img/millionaire-background.png') no-repeat;
+        position: relative;
+    }
+    &__wrapper {
+        max-width: 80vw;
+        margin: 0 auto;
+    }
+    &__display {
+        height: 60vh;
+        padding: 50px 0 20px 0;
+        position: relative;
+        width: 100%;
+    }
+
+    &__logo {
+        position: absolute;
+        @include mix.transformCenter();
+        width: 30%;
+        min-width: 300px;
+        &-img {
+            user-select: none;
+        }
+    }
+}
+
+.mute-button {
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+.wrong-answer {
+    visibility: hidden;
+}

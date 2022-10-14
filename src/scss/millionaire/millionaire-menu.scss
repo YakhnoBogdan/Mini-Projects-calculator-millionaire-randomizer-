@@ -1,0 +1,35 @@
+@use '@utils/mixins.scss' as mix;
+
+.millionaire-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: all 0.3s ease-in;
+    gap: 30px;
+    background-color: rgba(0, 0, 0, .9);
+    z-index: 9999;
+    &_hide {
+        opacity: 0;
+        display: none;
+    }
+    &__options-list li {
+        text-align: center;
+        cursor: pointer;
+        &:hover {
+            background-color: rgb(35, 171, 74);
+        }
+    }
+    &__options-list span {
+        @include mix.textProp(#fff, 2rem, 500);
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+    }
+}

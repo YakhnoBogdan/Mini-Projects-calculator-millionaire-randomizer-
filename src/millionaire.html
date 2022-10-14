@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+"title": "Millionaire"
+})
+
+
+<body>
+	@@include('html/header.html',{})
+	<main class="millionaire-main">
+		<div class="millionaire-menu">
+			<ul class="millionaire-menu__options-list">
+				<li><span class="millionaire-menu__start-game">Start new Game</span></li>
+			</ul>
+			<ol class="millionaire-menu__scores-list">
+				<li class="millionaire-menu__scores-item"></li>
+			</ol>
+		</div>
+		<div class="millionaire">
+
+			<div class="game-modal">
+				<h3 class="game-modal__title">Game over</h3>
+				<span class="game-modal__win-amount"></span>
+				<span class="game-modal__score"></span>
+				<div class="game-modal__confirm">
+					<button class="game-modal__play-again">Play again</button>
+					<button class="game-modal__cancel">Cancel</button>
+				</div>
+			</div>
+			<div class="friendsCall-hint">
+				<h3 class="friendsCall-hint__title">John advices you :</h3>
+				<span class="friendsCall-hint__variant"></span>
+				<button class="friendsCall-hint__close-button">Close</button>
+			</div>
+			<div class="millionaire__wrapper">
+				<div class="millionaire__display">
+					<div class="hints">
+						<ul class="hints__list">
+							<li><button class="hints__50-50-button hints-button">50:50</button></li>
+							<li><button class="hints__friends-call hints-button"></button></li>
+						</ul>
+					</div>
+					<div class="millionaire__logo">
+						<img src="../assets/img/millionaire-logo.png" alt="Millionaire logo"
+							class="millionaire__logo-img">
+					</div>
+					<ul class="stages">
+						<li class="stages__item stages__item_current"><b class="stages__lvl">1. </b><span>$100</span>
+						</li>
+						<li class="stages__item"><b class="stages__lvl">2. </b><span>$200</span></li>
+						<li class="stages__item"><b class="stages__lvl">3. </b><span>$500</span></li>
+						<li class="stages__item"><b class="stages__lvl">4. </b><span>$1000</span></li>
+						<li class="stages__item stages__saved-amount"><b class="stages__lvl">5. </b><span>$2000</span>
+						</li>
+						<li class="stages__item"><b class="stages__lvl">6. </b><span>$5000</span></li>
+						<li class="stages__item"><b class="stages__lvl">7. </b><span>$10 000</span></li>
+						<li class="stages__item"><b class="stages__lvl">8. </b><span>$20 000</span></li>
+						<li class="stages__item"><b class="stages__lvl">9. </b><span>$40 000</span></li>
+						<li class="stages__item stages__saved-amount"><b class="stages__lvl">10. </b><span>$80
+								000</span></li>
+						<li class="stages__item"><b class="stages__lvl">11. </b><span>$100 000</span></li>
+						<li class="stages__item"><b class="stages__lvl">12. </b><span>$150 000</span> </li>
+						<li class="stages__item"><b class="stages__lvl">13. </b><span>$250 000</span></li>
+						<li class="stages__item"><b class="stages__lvl">14. </b><span>$500 000</span></li>
+						<li class="stages__item"><b class="stages__lvl">15. </b><span>$1 000 000</span></li>
+					</ul>
+				</div>
+				<div class="quiz">
+					<div class="quiz__question-block">
+						<span class="quiz__question">Who and whyWho and whyWho and whyWho and whyWho and whyWho and
+							whyWho and whyWho and whyWho and why</span>
+					</div>
+					<div class="quiz__answers">
+						<ul class="quiz__answers-list">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src="./scripts/burger.js"></script>
+	<script type="module" src="./scripts/Millionaire.js"></script>
+</body>
+
+</html>

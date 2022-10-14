@@ -1,0 +1,35 @@
+@mixin transformCenter {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+
+@mixin breakpoint($point) {
+    @if $point ==mobile {
+        @media only screen and (max-width: 576px)  {
+            @content;
+        }
+    }
+    @else if $point ==tablet {
+        @media only screen and (max-width: 768px)  {
+            @content;
+        }
+    }
+    @else if $point ==tabletLarge {
+        @media only screen and (max-width: 992px){
+            @content;
+        }
+    }
+    @else if $point ==desktop {
+        @media only screen and (max-width: 1440px){
+            @content;
+        }
+    }
+}
+
+@mixin textProp($color, $fz, $fw) {
+    color: $color;
+    font-size: $fz;
+    font-weight: $fw;
+}

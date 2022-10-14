@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <header class="header">
+    <div class="header__wrapper">
+
+        <nav class='nav-menu'>
+            <ul class='nav-menu-list'>
+                <li class='nav-menu-list__item'><a href='./millionaire.html' class='nav-menu-list__link'>Millionare</a>
+                </li>
+                <li class='nav-menu-list__item'><a href='./calculator.html' class='nav-menu-list__link'>Calculator</a>
+                </li>
+                <li class='nav-menu-list__item'><a href='./randomizer.html' class='nav-menu-list__link'>Randomizer</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <main class="main">
+        <div class="wrapper">
+            <div class="calculator">
+                <input type="text" disabled class="calculator__output" value="0" style="font-size: 2rem;">
+                <div class="calculator__controls-board">
+                    <div class="calculator__button-row">
+                        <button class="calculator__button grey-sign" id="clear">AC</button>
+                        <button class="calculator__button grey-sign" id="positive-negative">+/-</button>
+                        <button class="calculator__button grey-sign" id="percent">%</button>
+                        <button class="calculator__button calc-sign">/</button>
+                    </div>
+                    <div class="calculator__button-row">
+                        <button class="calculator__button digit-sign">7</button>
+                        <button class="calculator__button digit-sign">8</button>
+                        <button class="calculator__button digit-sign">9</button>
+                        <button class="calculator__button calc-sign">x</button>
+                    </div>
+                    <div class="calculator__button-row">
+                        <button class="calculator__button digit-sign">4</button>
+                        <button class="calculator__button digit-sign">5</button>
+                        <button class="calculator__button digit-sign">6</button>
+                        <button class="calculator__button calc-sign">-</button>
+                    </div>
+                    <div class="calculator__button-row">
+                        <button class="calculator__button digit-sign">1</button>
+                        <button class="calculator__button digit-sign">2</button>
+                        <button class="calculator__button digit-sign">3</button>
+                        <button class="calculator__button calc-sign">+</button>
+                    </div>
+                    <div class="calculator__button-row">
+                        <button class="calculator__button digit-sign zero">0</button>
+                        <button class="calculator__button comma">.</button>
+                        <button class="calculator__button equal">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./scripts/calculator.js"></script>
+</body>
+
+</html>

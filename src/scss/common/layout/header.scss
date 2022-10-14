@@ -1,0 +1,97 @@
+@use '@utils/mixins.scss' as mix;
+
+.header {
+    height: 80px;
+    background-color: rgb(66, 62, 62);
+
+    &__wrapper {
+        max-width: 85vw;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+}
+
+.nav-menu {
+    &-list {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        &__item {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                background-color: rgb(150, 144, 144);
+                height: 3px;
+                width: 100%;
+                bottom: -10px;
+                left: 0;
+                transform: scaleX(0);
+                transition: transform .25s ease-in;
+            }
+
+            &:hover::before {
+                content: "";
+                transform: scaleX(1);
+            }
+        }
+
+        &__link {
+            @include mix.textProp(#fff, 1.5rem, 500);
+            font-family: 'Rubik';
+            text-decoration: none;
+        }
+    }
+
+}
+
+.burger-menu {
+    position: fixed;
+    left: -70vw;
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(34, 32, 32);
+    transition: left 0.5s ease-in-out;
+
+    &.active {
+        left: 0;
+    }
+
+    & .nav-burger-list {
+        &__item {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@include mix.breakpoint(mobile) {}
+
+
+.index-nav-menu {
+    &-list {
+        transform: translateY(100px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2%;
+        &__link {
+            @include mix.textProp(#000, 2rem, 500);
+            font-family: 'Rubik', sans-serif;
+            text-decoration: none;
+            &:hover {
+                background-color: #000;
+                color: #fff;
+            }
+        }
+    }
+
+}
